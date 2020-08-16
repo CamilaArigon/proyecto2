@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+
+</head>
+<body>
+    <h1 style="background-color: blueviolet; color:rgb(243, 226, 204) ; text-align: center;"> Título común en todas las pág</h1>
+
+    {% include "superior/barra.html" %}
+
+    <h3 style="text-align: center;">Título compartido</h3>
+    {% block content %}
+    
+    {% endblock %}
+
+    <p style="background-color: rgb(144, 60, 223); color:rgb(245, 233, 218) ; text-align: center;">pie en común en la pag</p>
+
+</body>
+</html>

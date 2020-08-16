@@ -1,0 +1,58 @@
+<html> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+
+    {% include "superior/barra.html" %}
+
+    <h1 style="color:blueviolet" >
+    Hola, pagina con Django usando plantillas
+    </h1>
+
+    <!--esto es un comentario-->
+    
+    <!--
+    esto
+    es
+    un
+    comentario
+    de
+    varias
+    lineas
+    -->
+
+    {% if mi_nombre == "Camila" %}
+
+    <p>Hola Cami</p>
+
+    {% else %}
+    <p>Tu no eres Camila</p>
+    
+    {% endif %}
+
+    <h2 style="color: rgb(84, 68, 187); font-family:cursive">
+    Mi nombre es: <strong><em>{{mi_nombre.upper}} {{mi_apellido.upper}}</em></strong>
+    </h2>
+
+    <h2> viendo las plantillas a d&iacute;a: {{este_momento.day}}/{{este_momento.month}}/{{este_momento.year}}
+    </h2>
+
+    <p><strong>N&uacute;meros</strong></p>
+    
+    <p>
+        <ul>
+        {% if temas_uno %}
+            {% for Numero in temas_uno %}
+
+                <li>{{Numero}}</li>
+
+
+            {% endfor %}
+
+        {% else %}
+        <p>NO HAY ELEMENTOS</p>
+        {% endif %}
+        </ul>
+    </p>
+</body>
+</html>
